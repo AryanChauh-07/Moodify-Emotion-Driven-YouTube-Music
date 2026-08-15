@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moodify - Emotion-Based YouTube Music Player</title>
+  <meta name="description" content="Discover songs tailored to your emotions. Click any song to automatically play it directly on YouTube!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="happy">
+  <!-- Toast Notification for YouTube Launch -->
+  <div class="yt-toast" id="ytToast">
+    <i class="fa-brands fa-youtube fa-bounce"></i>
+    <span id="ytToastText">Opening song on YouTube...</span>
+  </div>
+
+  <!-- Dynamic Ambient Glow Background -->
+  <div class="ambient-glow" id="ambientGlow"></div>
+  <div class="ambient-particles" id="ambientParticles"></div>
+
+  <div class="app-container">
+    <!-- Navigation / Header -->
+    <header class="app-header">
+      <div class="brand" id="brandLogo">
+        <div class="brand-icon">
+          <i class="fa-solid fa-compact-disc fa-spin-pulse"></i>
+        </div>
+        <div class="brand-text">
+          <h1>Mood<span>ify</span></h1>
+          <p>Emotion-Driven YouTube Music</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Search songs, artists, or moods..." autocomplete="off">
+          <button class="clear-search-btn" id="clearSearchBtn" title="Clear search"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <button class="icon-btn" id="favoritesToggleBtn" title="Saved Favorites">
+          <i class="fa-solid fa-heart"></i>
+          <span class="badge" id="favCountBadge">0</span>
+        </button>
+        <button class="icon-btn yt-header-btn" id="cinemaToggleBtn" title="Toggle Embedded Cinema Player">
+          <i class="fa-brands fa-youtube"></i>
+          <span>Cinema Embed</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Hero Emotion Selection Section -->
+      <section class="hero-section">
+        <div class="hero-badge">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Feel Your Music
+        </div>
+        <h2 class="hero-title">Select your emotion to discover songs</h2>
+        <p class="hero-subtitle">Tap any emotion card below. When you click any song, it will <strong>automatically launch and play directly on YouTube</strong> with full audio and video!</p>
+
+        <!-- Emotion Visual Grid -->
+        <div class="emotions-grid" id="emotionsGrid">
+          <!-- Emotion cards dynamically rendered here -->
+        </div>
+      </section>
+
+      <!-- Music Discovery Section -->
+      <section class="discovery-section" id="discoverySection">
+        
+        <!-- Now Playing Hero Showcase -->
+        <div class="now-playing-banner" id="nowPlayingBanner">
+          <!-- Left: Artwork & Spinning Vinyl Section -->
+          <div class="banner-artwork-section">
+            <div class="vinyl-showcase-container" id="vinylShowcase">
+              <!-- Vinyl Record Disc -->
+              <div class="vinyl-disc" id="vinylDisc">
+                <div class="vinyl-center-label">
+                  <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=120&auto=format&fit=crop&q=80" alt="Vinyl Center" id="vinylCenterImg">
+                </div>
+              </div>
+              
+              <!-- Album Artwork Sleeve -->
+              <div class="album-cover-box" id="albumCoverBox">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=80" alt="Song Thumbnail" id="bannerCoverImg" class="banner-cover-img">
+                <div class="album-cover-badge" id="albumCoverBadge">
+                  <i class="fa-brands fa-youtube"></i> <span id="coverBadgeText">YouTube Ready</span>
+                </div>
+                <div class="album-play-overlay" id="albumPlayOverlay">
+                  <button class="album-play-btn" id="albumPlayBtn" title="Play Directly on YouTube">
+                    <i class="fa-solid fa-play" id="albumPlayIcon"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- YouTube Video Embed Frame (Toggleable) -->
+            <div class="banner-video-container" id="bannerVideoContainer" style="display: none;">
+              <iframe id="mainYtIframe" 
+                src="" 
+                title="YouTube Music Player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <!-- Player Mode Tabs: YouTube Tab vs Embedded -->
+            <div class="player-mode-switch">
+              <button class="mode-tab active" id="audioModeTab" title="Direct YouTube Mode">
+                <i class="fa-brands fa-youtube"></i> Direct YouTube
+              </button>
+              <button class="mode-tab" id="videoModeTab" title="Embedded Player">
+                <i class="fa-solid fa-tv"></i> In-App Player
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Song Info, Live Visualizer & Playback Controls -->
+          <div class="banner-info-section">
+            <div class="banner-status-badge">
+              <span class="live-dot" id="liveDot"></span> <span id="bannerStatusText">Click any song below to play directly on YouTube</span>
+            </div>
+            <h2 class="banner-track-title" id="bannerTrackTitle">No Song Selected</h2>
+            <p class="banner-track-artist" id="bannerTrackArtist">Tap any song card to automatically open and play on YouTube</p>
+            
+            <div class="banner-tags">
+              <span class="badge-tag" id="bannerMoodTag"><i class="fa-solid fa-heart"></i> Happy</span>
+              <span class="badge-tag" id="bannerLangTag"><i class="fa-solid fa-globe"></i> English</span>
+              <span class="badge-tag highlight" id="bannerMatchTag">99% Mood Match</span>
+            </div>
+
+            <!-- Sound Wave Canvas Visualizer -->
+            <div class="banner-visualizer">
+              <div class="viz-header">
+                <span><i class="fa-solid fa-wave-square"></i> Live Sound Frequency</span>
+                <span class="viz-status" id="vizStatus">YouTube Live Audio</span>
+              </div>
+              <canvas id="spectrumCanvas" width="400" height="50"></canvas>
+            </div>
+
+            <!-- Audio Progress Bar in Banner -->
+            <div class="banner-timeline-wrap">
+              <span class="time-stamp" id="bannerCurrentTime">0:00</span>
+              <div class="banner-timeline-bar" id="bannerTimelineBar" title="Click anywhere to jump to timestamp">
+                <div class="banner-timeline-fill" id="bannerTimelineFill"></div>
+              </div>
+              <span class="time-stamp" id="bannerDuration">0:00</span>
+            </div>
+
+            <!-- Skip & Play Action Controls -->
+            <div class="banner-actions">
+              <!-- Direct YouTube Play Button -->
+              <button class="banner-btn primary-yt-btn" id="bannerPlayPauseBtn" title="Launch on YouTube">
+                <i class="fa-brands fa-youtube" id="bannerPlayIcon"></i> <span id="bannerPlayText">Play on YouTube</span>
+              </button>
+
+              <!-- Skip -10s -->
+              <button class="banner-btn skip-btn" id="bannerSkipBackBtn" title="Rewind 10 Seconds">
+                <i class="fa-solid fa-rotate-left"></i> -10s
+              </button>
+
+              <!-- Skip +10s -->
+              <button class="banner-btn skip-btn" id="bannerSkipFwdBtn" title="Forward 10 Seconds">
+                +10s <i class="fa-solid fa-rotate-right"></i>
+              </button>
+
+              <!-- Favorite Button -->
+              <button class="banner-btn icon-only-btn" id="bannerFavBtn" title="Save to Favorites">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discovery Header & Filter Controls -->
+        <div class="discovery-header">
+          <div class="current-mood-info">
+            <div class="mood-icon-large" id="currentMoodIcon">☀️</div>
+            <div>
+              <div class="mood-tag" id="currentMoodTag">Selected Emotion</div>
+              <h3 class="current-mood-title" id="currentMoodTitle">Happy & Joyful</h3>
+              <p class="current-mood-desc" id="currentMoodDesc">Bright, cheerful & uplifting tunes to fill you with positive energy and smiles.</p>
+            </div>
+          </div>
+
+          <!-- Controls / Filter Tabs -->
+          <div class="filter-controls">
+            <div class="filter-group">
+              <span class="filter-label"><i class="fa-solid fa-globe"></i> Language:</span>
+              <div class="pill-group" id="languageFilters">
+                <button class="pill-btn active" data-lang="all">All</button>
+                <button class="pill-btn" data-lang="english">English</button>
+                <button class="pill-btn" data-lang="hindi">Hindi</button>
+                <button class="pill-btn" data-lang="instrumental">Lo-Fi / Beats</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-label"><i class="fa-solid fa-sliders"></i> Vibe Intensity:</span>
+              <div class="intensity-slider-wrap">
+                <input type="range" id="intensitySlider" min="1" max="3" value="2" step="1">
+                <div class="intensity-labels">
+                  <span data-val="1">Mellow</span>
+                  <span data-val="2" class="active">Balanced</span>
+                  <span data-val="3">Intense</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Songs Grid / List -->
+        <div class="songs-container">
+          <div class="section-subhead">
+            <h4>Available Songs for this Emotion (<span id="songsCount">0</span>)</h4>
+            <div class="view-toggles">
+              <button class="view-btn active" id="gridViewBtn" title="Grid View"><i class="fa-solid fa-grip"></i></button>
+              <button class="view-btn" id="listViewBtn" title="List View"><i class="fa-solid fa-list"></i></button>
+            </div>
+          </div>
+
+          <div class="songs-grid" id="songsGrid">
+            <!-- Songs dynamically injected here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Side Drawer: Favorites -->
+    <aside class="favorites-drawer" id="favoritesDrawer">
+      <div class="drawer-header">
+        <h3><i class="fa-solid fa-heart"></i> Liked Songs</h3>
+        <button class="close-drawer-btn" id="closeFavDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="drawer-content" id="favSongsList">
+        <p class="empty-fav-msg">No liked songs yet. Click the heart icon on any song to save it here!</p>
+      </div>
+    </aside>
+
+    <!-- Full Cinema Player Modal -->
+    <div class="video-modal-backdrop" id="videoModalBackdrop">
+      <div class="video-modal-card">
+        <div class="modal-top-bar">
+          <div class="now-playing-badge"><i class="fa-brands fa-youtube"></i> <span id="modalPlayingStatus">YouTube Live Player</span></div>
+          <div class="modal-controls">
+            <button class="modal-icon-btn" id="openExternalYtBtn" title="Open in YouTube"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button class="modal-icon-btn" id="closeModalBtn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="yt-player-wrapper">
+            <iframe id="cinemaYtIframe" 
+              src="" 
+              title="YouTube Cinema Player" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="modal-info-panel">
+            <div class="modal-song-details">
+              <div class="modal-thumb-wrap">
+                <img src="" alt="Thumbnail" id="modalThumbImg" class="modal-thumb-img">
+              </div>
+              <h3 id="modalSongTitle">Song Title</h3>
+              <p id="modalSongArtist">Artist Name</p>
+              <div class="modal-badges">
+                <span class="badge-tag" id="modalEmotionTag">Mood</span>
+                <span class="badge-tag" id="modalLangTag">Language</span>
+                <span class="badge-tag highlight" id="modalMatchTag">99% Match</span>
+              </div>
+            </div>
+
+            <!-- Lyrics / Info Box -->
+            <div class="lyrics-card" id="lyricsCard">
+              <div class="lyrics-header">
+                <span><i class="fa-solid fa-quote-left"></i> Song Vibe & Lyrics Highlights</span>
+              </div>
+              <div class="lyrics-body" id="lyricsBody">
+                Select a song to see highlights and lyrics.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Persistent Bottom Music Player Bar with Animated Thumbnail & Skip Buttons -->
+    <footer class="bottom-player-bar" id="playerBar">
+      <div class="player-left">
+        <div class="track-thumb-box" id="playerThumbBox" title="Click to launch on YouTube">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&auto=format&fit=crop&q=80" alt="Track Cover" id="playerThumbImg" class="track-thumb">
+          <div class="track-thumb-overlay" id="playerThumbOverlay">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+        <div class="track-meta">
+          <div class="track-title" id="playerTrackTitle">No song playing</div>
+          <div class="track-artist" id="playerTrackArtist">Click any song to play on YouTube</div>
+        </div>
+        <button class="heart-btn" id="playerLikeBtn" title="Like song">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="player-center">
+        <div class="player-controls">
+          <button class="ctrl-btn" id="shuffleBtn" title="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+          
+          <!-- Previous Track -->
+          <button class="ctrl-btn" id="prevBtn" title="Previous Track"><i class="fa-solid fa-backward-step"></i></button>
+          
+          <!-- Skip -10 Seconds -->
+          <button class="ctrl-btn skip-mini-btn" id="skipBack10Btn" title="Rewind 10s">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span class="skip-num">10</span>
+          </button>
+
+          <!-- Main Play on YouTube Button -->
+          <button class="ctrl-btn play-main-btn" id="playPauseBtn" title="Play on YouTube (Spacebar)">
+            <i class="fa-solid fa-play" id="playPauseIcon"></i>
+          </button>
+
+          <!-- Skip +10 Seconds -->
+          <button class="ctrl-btn skip-mini-btn" id="skipFwd10Btn" title="Forward 10s">
+            <i class="fa-solid fa-rotate-right"></i>
+            <span class="skip-num">10</span>
+          </button>
+
+          <!-- Next Track -->
+          <button class="ctrl-btn" id="nextBtn" title="Next Track"><i class="fa-solid fa-forward-step"></i></button>
+          <button class="ctrl-btn" id="repeatBtn" title="Repeat"><i class="fa-solid fa-repeat"></i></button>
+        </div>
+
+        <div class="playback-timeline">
+          <span class="time-stamp" id="currentTimeLabel">0:00</span>
+          <div class="timeline-bar" id="timelineBar" title="Click to seek">
+            <div class="timeline-fill" id="timelineFill"></div>
+            <div class="timeline-handle" id="timelineHandle"></div>
+          </div>
+          <span class="time-stamp" id="durationLabel">0:00</span>
+        </div>
+      </div>
+
+      <div class="player-right">
+        <button class="ctrl-btn yt-direct-bottom-btn" id="directYtBtn" title="Direct YouTube Launch">
+          <i class="fa-brands fa-youtube"></i>
+          <span>Play on YouTube</span>
+        </button>
+        
+        <div class="volume-container">
+          <button class="ctrl-btn" id="volumeIconBtn"><i class="fa-solid fa-volume-high" id="volumeIcon"></i></button>
+          <div class="volume-slider-bar" id="volumeBar">
+            <div class="volume-fill" id="volumeFill"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
