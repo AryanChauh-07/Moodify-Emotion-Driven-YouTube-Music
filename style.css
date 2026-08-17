@@ -427,6 +427,14 @@ body {
   color: var(--accent-light);
   margin-bottom: 14px;
   box-shadow: 0 0 15px var(--accent-glow);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.hero-badge:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px var(--accent-glow);
 }
 
 .hero-title {
@@ -467,6 +475,7 @@ body {
   flex-direction: column;
   text-align: left;
   user-select: none;
+  animation: card-load-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
 
 .emotion-card:hover {
