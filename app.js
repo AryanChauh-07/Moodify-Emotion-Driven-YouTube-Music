@@ -906,6 +906,7 @@ const DOM = {
   ytToast: document.getElementById("ytToast"),
   ytToastText: document.getElementById("ytToastText"),
   brandLogo: document.getElementById("brandLogo"),
+  feelYourMusicBadge: document.getElementById("feelYourMusicBadge"),
   ambientGlow: document.getElementById("ambientGlow"),
   emotionsGrid: document.getElementById("emotionsGrid"),
   currentMoodIcon: document.getElementById("currentMoodIcon"),
@@ -1024,13 +1025,16 @@ function showYouTubeToast(title) {
 function renderEmotionCards() {
   DOM.emotionsGrid.innerHTML = "";
 
-  EMOTIONS_DATA.forEach(emotion => {
+  EMOTIONS_DATA.forEach((emotion, index) => {
     const card = document.createElement("div");
     card.className = `emotion-card ${emotion.id === AppState.currentEmotion ? 'active' : ''}`;
     card.dataset.emotionId = emotion.id;
     card.style.setProperty("--card-gradient", emotion.gradient);
     card.style.setProperty("--card-accent", emotion.accent);
     card.style.setProperty("--card-glow", emotion.glow);
+
+    // Staggered animation for loading
+    card.style.animationDelay = `${index * 50}ms`;
 
     card.innerHTML = `
       <div class="emotion-visual-box">
@@ -1474,6 +1478,10 @@ function startSpectrumVisualizer() {
 // ==========================================================================
 function setupEventListeners() {
   DOM.brandLogo.addEventListener("click", () => setEmotion("happy", true));
+
+  DOM.feelYourMusicBadge.addEventListener("click", () => {
+    DOM.emotionsGrid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
 
   // Play / Pause Buttons (Launch directly on YouTube)
   DOM.playPauseBtn.addEventListener("click", togglePlayPause);
