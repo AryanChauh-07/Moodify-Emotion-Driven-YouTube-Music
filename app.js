@@ -173,42 +173,6 @@ const SONGS_DATA = [
     lyrics: "Don't believe me, just watch! Come on, dance, jump on it!"
   },
   {
-    id: "h5",
-    title: "Gallan Goodiyaan",
-    artist: "Yashita Sharma, Shankar Mahadevan",
-    emotion: "happy",
-    language: "hindi",
-    intensity: 3,
-    match: 99,
-    youtubeId: "jCEdTq3j-0U",
-    duration: 297,
-    lyrics: "Main daalun taal pe bhangra, tu bhi jee le zara!\nGallan goodiyaan!"
-  },
-  {
-    id: "h6",
-    title: "Dil Dhadakne Do",
-    artist: "Priyanka Chopra & Farhan Akhtar",
-    emotion: "happy",
-    language: "hindi",
-    intensity: 2,
-    match: 96,
-    youtubeId: "eM1vT-A2x4k",
-    duration: 220,
-    lyrics: "Har lamha hai naya, tu jee le zara!\nDil dhadakne do, dil dhadakne do."
-  },
-  {
-    id: "h7",
-    title: "London Thumakda",
-    artist: "Labh Janjua, Neha Kakkar (Queen)",
-    emotion: "happy",
-    language: "hindi",
-    intensity: 3,
-    match: 98,
-    youtubeId: "udra3Mfw2oo",
-    duration: 230,
-    lyrics: "Oho patang waali dori, London thumakda!"
-  },
-  {
     id: "h8",
     title: "Sunny Morning Chill Lo-Fi",
     artist: "ChillHop Beats",
@@ -231,6 +195,54 @@ const SONGS_DATA = [
     youtubeId: "iPUmE-tP5Bk",
     duration: 223,
     lyrics: "I'm walking on sunshine, whoa!\nI'm walking on sunshine, whoa!"
+  },
+  {
+    id: "h10",
+    title: "Don't Stop Me Now",
+    artist: "Queen",
+    emotion: "happy",
+    language: "english",
+    intensity: 3,
+    match: 99,
+    youtubeId: "HgzGwKwLmgM",
+    duration: 210, // 3:30
+    lyrics: "Don't stop me now, I'm having such a good time, I'm having a ball!"
+  },
+  {
+    id: "h11",
+    title: "Lovely Day",
+    artist: "Bill Withers",
+    emotion: "happy",
+    language: "english",
+    intensity: 2,
+    match: 98,
+    youtubeId: "bEeaS6fuUoA",
+    duration: 255,
+    lyrics: "Then I look at you, and the world's alright with me. Just one look at you, and I know it's gonna be a lovely day."
+  },
+  {
+    id: "h12",
+    title: "Three Little Birds",
+    artist: "Bob Marley & The Wailers",
+    emotion: "happy",
+    language: "english",
+    intensity: 1,
+    match: 99,
+    youtubeId: "LanCLS_hIo4",
+    duration: 181,
+    lyrics: "Don't worry about a thing, 'cause every little thing is gonna be alright."
+  },
+  {
+    id: "h13",
+    title: "Here Comes The Sun",
+    artist: "The Beatles",
+    emotion: "happy",
+    language: "english",
+    intensity: 1,
+    match: 97,
+    youtubeId: "GKdl-jfdXQg",
+    duration: 185,
+    lyrics: "Here comes the sun, doo-doo-doo-doo. Here comes the sun, and I say, it's all right."
   },
 
   // --- SAD / MELANCHOLY ---
@@ -283,42 +295,6 @@ const SONGS_DATA = [
     lyrics: "'Cause sometimes I look in her eyes and that's where I find a glimpse of us..."
   },
   {
-    id: "s5",
-    title: "Channa Mereya",
-    artist: "Arijit Singh, Pritam",
-    emotion: "sad",
-    language: "hindi",
-    intensity: 3,
-    match: 100,
-    youtubeId: "bzSTpdcs-EI",
-    duration: 289,
-    lyrics: "Acha chalta hoon, duaon mein yaad rakhna...\nMere zikr ka zubaan pe swaad rakhna."
-  },
-  {
-    id: "s6",
-    title: "Agar Tum Saath Ho",
-    artist: "Alka Yagnik, Arijit Singh",
-    emotion: "sad",
-    language: "hindi",
-    intensity: 2,
-    match: 99,
-    youtubeId: "sK7riqg2mr4",
-    duration: 341,
-    lyrics: "Dil ye sambhal jaaye agar tum saath ho...\nHar gham phisalne lage agar tum saath ho."
-  },
-  {
-    id: "s7",
-    title: "Jeena Jeena",
-    artist: "Atif Aslam, Sachin-Jigar",
-    emotion: "sad",
-    language: "hindi",
-    intensity: 2,
-    match: 95,
-    youtubeId: "v8K7dF_fD-o",
-    duration: 228,
-    lyrics: "Dehleez pe mere dil ki jo rakhe hain tune kadam...\nTere naam pe meri zindagi likh di mere humdum."
-  },
-  {
     id: "s8",
     title: "Melancholy Piano & Rain Healing",
     artist: "Quiet Melodies",
@@ -341,6 +317,54 @@ const SONGS_DATA = [
     youtubeId: "vt1Pwfnh5pc",
     duration: 237,
     lyrics: "I hurt myself today to see if I still feel.\nI focus on the pain, the only thing that's real."
+  },
+  {
+    id: "s10",
+    title: "Everybody Hurts",
+    artist: "R.E.M.",
+    emotion: "sad",
+    language: "english",
+    intensity: 3,
+    match: 98,
+    youtubeId: "5rOiW_xY-kc",
+    duration: 317, // 5:17
+    lyrics: "Everybody hurts sometimes, everybody cries. And everybody hurts sometimes."
+  },
+  {
+    id: "s11",
+    title: "when the party's over",
+    artist: "Billie Eilish",
+    emotion: "sad",
+    language: "english",
+    intensity: 2,
+    match: 98,
+    youtubeId: "pbMwTeeMdfY",
+    duration: 199,
+    lyrics: "Don't you know I'm no good for you? I've learned to lose you, can't afford to."
+  },
+  {
+    id: "s12",
+    title: "Say Something",
+    artist: "A Great Big World, Christina Aguilera",
+    emotion: "sad",
+    language: "english",
+    intensity: 3,
+    match: 99,
+    youtubeId: "-2U0Ivkn2Ds",
+    duration: 229,
+    lyrics: "Say something, I'm giving up on you. I'll be the one, if you want me to."
+  },
+  {
+    id: "s13",
+    title: "Let Her Go",
+    artist: "Passenger",
+    emotion: "sad",
+    language: "english",
+    intensity: 2,
+    match: 97,
+    youtubeId: "RBumgq5yVrA",
+    duration: 252,
+    lyrics: "Only know you love her when you let her go. And you let her go."
   },
 
   // --- ENERGETIC / WORKOUT ---
@@ -381,42 +405,6 @@ const SONGS_DATA = [
     lyrics: "Fire up that loud, another round of shots!\nTurn down for what?!"
   },
   {
-    id: "e4",
-    title: "Zinda",
-    artist: "Siddharth Mahadevan (Bhaag Milkha Bhaag)",
-    emotion: "energetic",
-    language: "hindi",
-    intensity: 3,
-    match: 99,
-    youtubeId: "Kevdt1T9DAU",
-    duration: 211,
-    lyrics: "Zinda hai toh pyala pura bhar le!\nKoshish toh kar maut ko bhi jhatak de!"
-  },
-  {
-    id: "e5",
-    title: "Kar Har Maidaan Fateh",
-    artist: "Sukhwinder Singh, Shreya Ghoshal",
-    emotion: "energetic",
-    language: "hindi",
-    intensity: 2,
-    match: 98,
-    youtubeId: "9n4848g5Z10",
-    duration: 311,
-    lyrics: "Ghayal parinda hai tu, dikhla jahan ko tera zor!\nKar har maidaan fateh re bandeya!"
-  },
-  {
-    id: "e6",
-    title: "Dangal Title Track",
-    artist: "Daler Mehndi, Pritam",
-    emotion: "energetic",
-    language: "hindi",
-    intensity: 3,
-    match: 97,
-    youtubeId: "y60chkpbd6s",
-    duration: 300,
-    lyrics: "Maa ke pet se marghat tak, hai teri kahani pag pag...\nBhed le nishana tu, dangal dangal!"
-  },
-  {
     id: "e7",
     title: "High Energy Synthwave Pulse",
     artist: "CyberDrive",
@@ -429,16 +417,52 @@ const SONGS_DATA = [
     lyrics: "⚡ High BPM pumping synthwave bassline driving pure motivation."
   },
   {
-    id: "e8",
-    title: "Vande Mataram",
-    artist: "A.R. Rahman",
+    id: "e9",
+    title: "Thunderstruck",
+    artist: "AC/DC",
     emotion: "energetic",
-    language: "hindi",
+    language: "english",
+    intensity: 3,
+    match: 99,
+    youtubeId: "v2AC41dglnM",
+    duration: 272, // 4:32
+    lyrics: "I was caught in the middle of a railroad track. Thunderstruck!"
+  },
+  {
+    id: "e10",
+    title: "Can't Hold Us",
+    artist: "Macklemore & Ryan Lewis",
+    emotion: "energetic",
+    language: "english",
     intensity: 3,
     match: 98,
-    youtubeId: "yJp4k8gJ82Q",
-    duration: 340,
-    lyrics: "Vande Mataram, Vande Mataram!\nSujalam sufalam, malayaja sheetalam."
+    youtubeId: "2zNSgSzhBfM",
+    duration: 258,
+    lyrics: "Can we go back, this is the moment. Tonight is the night, we'll fight 'til it's over. So we put our hands up like the ceiling can't hold us."
+  },
+  {
+    id: "e11",
+    title: "Lose Yourself",
+    artist: "Eminem",
+    emotion: "energetic",
+    language: "english",
+    intensity: 3,
+    match: 100,
+    youtubeId: "_Yhyp-_hX2s",
+    duration: 326,
+    lyrics: "You only get one shot, do not miss your chance to blow. This opportunity comes once in a lifetime."
+  },
+  {
+    id: "e12",
+    title: "Uprising",
+    artist: "Muse",
+    emotion: "energetic",
+    language: "english",
+    intensity: 3,
+    match: 97,
+    youtubeId: "w8KQmps-Sog",
+    duration: 304,
+    lyrics: "They will not force us, they will stop degrading us, they will not control us. We will be victorious!"
   },
 
   // --- CALM / RELAXED ---
@@ -467,42 +491,6 @@ const SONGS_DATA = [
     lyrics: "Don't stay awake for too long, don't go to bed...\nI'll make a cup of coffee for your head."
   },
   {
-    id: "c3",
-    title: "Kabira",
-    artist: "Tochi Raina, Rekha Bhardwaj",
-    emotion: "calm",
-    language: "hindi",
-    intensity: 2,
-    match: 100,
-    youtubeId: "jHNNMj5bNQw",
-    duration: 223,
-    lyrics: "Bann ke titli dil uda hai kahin door...\nRe Kabira maan jaa, re Fakeera yun na jaa."
-  },
-  {
-    id: "c4",
-    title: "Iktara",
-    artist: "Amit Trivedi, Kavita Seth",
-    emotion: "calm",
-    language: "hindi",
-    intensity: 1,
-    match: 98,
-    youtubeId: "fSS_R91Nimw",
-    duration: 254,
-    lyrics: "O re Manwa tu toh bawra hai...\nGoonja sa hai koi Iktara iktara."
-  },
-  {
-    id: "c5",
-    title: "Baarishein",
-    artist: "Anuv Jain",
-    emotion: "calm",
-    language: "hindi",
-    intensity: 1,
-    match: 97,
-    youtubeId: "dZ0fwJojhrs",
-    duration: 215,
-    lyrics: "Hawaayein chhu gayi hain tujhko jaise...\nTu muskuraaye aur yeh baarishein behne lagein."
-  },
-  {
     id: "c6",
     title: "Weightless",
     artist: "Marconi Union",
@@ -525,6 +513,54 @@ const SONGS_DATA = [
     youtubeId: "k_0y_x_m_0Q",
     duration: 380,
     lyrics: "🎹 Delicate and flowing piano melodies for deep relaxation and introspection."
+  },
+  {
+    id: "c8",
+    title: "Adagio for Strings",
+    artist: "Samuel Barber",
+    emotion: "calm",
+    language: "instrumental",
+    intensity: 1,
+    match: 97,
+    youtubeId: "RBMY4i2b-2E",
+    duration: 420, // 7:00
+    lyrics: "🎻 A timeless classical piece for profound calm and introspection."
+  },
+  {
+    id: "c9",
+    title: "Better Together",
+    artist: "Jack Johnson",
+    emotion: "calm",
+    language: "english",
+    intensity: 1,
+    match: 98,
+    youtubeId: "u57d4_b_YgI",
+    duration: 207,
+    lyrics: "It's not always easy and sometimes life can be deceiving. I'll tell you one thing, it's always better when we're together."
+  },
+  {
+    id: "c10",
+    title: "Ho Hey",
+    artist: "The Lumineers",
+    emotion: "calm",
+    language: "english",
+    intensity: 2,
+    match: 96,
+    youtubeId: "zvCBSSwgtg4",
+    duration: 163,
+    lyrics: "I belong with you, you belong with me, you're my sweetheart. (Ho!) (Hey!)"
+  },
+  {
+    id: "c11",
+    title: "Fast Car",
+    artist: "Tracy Chapman",
+    emotion: "calm",
+    language: "english",
+    intensity: 2,
+    match: 97,
+    youtubeId: "DwrHwZyJuUo",
+    duration: 297,
+    lyrics: "You got a fast car, I want a ticket to anywhere. Maybe we make a deal, maybe together we can get somewhere."
   },
 
   // --- ROMANTIC / IN LOVE ---
@@ -565,42 +601,6 @@ const SONGS_DATA = [
     lyrics: "When your legs don't work like they used to before...\nAnd the darling I will be loving you 'til we're 70."
   },
   {
-    id: "r4",
-    title: "Kesariya",
-    artist: "Arijit Singh, Pritam",
-    emotion: "romantic",
-    language: "hindi",
-    intensity: 3,
-    match: 100,
-    youtubeId: "BddP6PYo2gs",
-    duration: 268,
-    lyrics: "Kesariya tera ishq hai piya, rang jaaun jo main haath lagaaun...\nDin beete saara teri fikr mein, rain saari teri khair manaun."
-  },
-  {
-    id: "r5",
-    title: "Tum Hi Ho",
-    artist: "Arijit Singh, Mithoon",
-    emotion: "romantic",
-    language: "hindi",
-    intensity: 2,
-    match: 99,
-    youtubeId: "IJq0yyWug1k",
-    duration: 262,
-    lyrics: "Kyunki tum hi ho, ab tum hi ho, zindagi ab tum hi ho...\nChain bhi, mera dard bhi, meri aashiqui ab tum hi ho."
-  },
-  {
-    id: "r6",
-    title: "Apna Bana Le",
-    artist: "Arijit Singh, Sachin-Jigar (Bhediya)",
-    emotion: "romantic",
-    language: "hindi",
-    intensity: 2,
-    match: 98,
-    youtubeId: "ElZfdU54Cp8",
-    duration: 250,
-    lyrics: "Tu mera koi na hoke bhi kuch laage...\nApna bana le piya, apna bana le mujhe."
-  },
-  {
     id: "r7",
     title: "Romantic Acoustic Strings",
     artist: "Acoustic Sunsets",
@@ -608,21 +608,57 @@ const SONGS_DATA = [
     language: "instrumental",
     intensity: 1,
     match: 95,
-    youtubeId: "7maJOI3QMu0",
+    youtubeId: "x1fF2eCb2wQ",
     duration: 230,
     lyrics: "💖 Sweet nylon string acoustic guitar expressing timeless devotion and love."
   },
   {
-    id: "r8",
-    title: "Pehla Nasha",
-    artist: "Udit Narayan & Sadhana Sargam",
+    id: "r9",
+    title: "All of Me",
+    artist: "John Legend",
     emotion: "romantic",
-    language: "hindi",
+    language: "english",
     intensity: 2,
-    match: 97,
-    youtubeId: "y_xQ-1-yQ_0",
-    duration: 290,
-    lyrics: "Pehla nasha, pehla khumar, naya pyar hai naya intezaar...\nKar loon main kya apna haal, aye dil-e-bekaraar."
+    match: 100,
+    youtubeId: "450p7goxZgQ",
+    duration: 269, // 4:29
+    lyrics: "'Cause all of me loves all of you. Love your curves and all your edges."
+  },
+  {
+    id: "r10",
+    title: "A Thousand Years",
+    artist: "Christina Perri",
+    emotion: "romantic",
+    language: "english",
+    intensity: 2,
+    match: 99,
+    youtubeId: "rtOvBOTyX00",
+    duration: 287,
+    lyrics: "I have died every day waiting for you. Darling, don't be afraid, I have loved you for a thousand years."
+  },
+  {
+    id: "r11",
+    title: "I Will Always Love You",
+    artist: "Whitney Houston",
+    emotion: "romantic",
+    language: "english",
+    intensity: 3,
+    match: 98,
+    youtubeId: "3JWTaaS7LdU",
+    duration: 271,
+    lyrics: "And I will always love you. I will always love you. You, my darling, you."
+  },
+  {
+    id: "r12",
+    title: "Can't Help Falling in Love",
+    artist: "Elvis Presley",
+    emotion: "romantic",
+    language: "english",
+    intensity: 1,
+    match: 99,
+    youtubeId: "vGJTaP6anOU",
+    duration: 181,
+    lyrics: "Wise men say only fools rush in. But I can't help falling in love with you."
   },
 
   // --- FOCUS / STUDY ---
@@ -686,6 +722,18 @@ const SONGS_DATA = [
     duration: 128,
     lyrics: "Minimalist hypnotic guitar and drum loop perfect for zero distractions."
   },
+  {
+    id: "f6",
+    title: "Gymnopédie No.1",
+    artist: "Erik Satie",
+    emotion: "focus",
+    language: "instrumental",
+    intensity: 1,
+    match: 97,
+    youtubeId: "S-Xm7s9eGxU",
+    duration: 180, // 3:00
+    lyrics: "🎹 Simple, elegant piano melody for quiet concentration and creative work."
+  },
 
   // --- NOSTALGIC / RETRO ---
   {
@@ -713,40 +761,40 @@ const SONGS_DATA = [
     lyrics: "Take on me (Take on me), take me on (Take on me)...\nI'll be gone in a day or two!"
   },
   {
-    id: "n3",
-    title: "Pal Pal Dil Ke Paas",
-    artist: "Kishore Kumar",
+    id: "n6",
+    title: "Wonderwall",
+    artist: "Oasis",
     emotion: "nostalgic",
-    language: "hindi",
+    language: "english",
     intensity: 2,
+    match: 98,
+    youtubeId: "bx1Bh8ZvH84",
+    duration: 259, // 4:19
+    lyrics: "Because maybe, you're gonna be the one that saves me. And after all, you're my wonderwall."
+  },
+  {
+    id: "n7",
+    title: "Bohemian Rhapsody",
+    artist: "Queen",
+    emotion: "nostalgic",
+    language: "english",
+    intensity: 3,
     match: 100,
-    youtubeId: "-3q6fN8n45U",
-    duration: 329,
-    lyrics: "Pal pal dil ke paas tum rehti ho...\nJeevan meethi pyaas, yeh kehti ho."
+    youtubeId: "fJ9rUzIMcZQ",
+    duration: 354,
+    lyrics: "Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality."
   },
   {
-    id: "n4",
-    title: "Kya Hua Tera Wada",
-    artist: "Mohammed Rafi, Sushma Shrestha",
+    id: "n8",
+    title: "Don't Stop Believin'",
+    artist: "Journey",
     emotion: "nostalgic",
-    language: "hindi",
+    language: "english",
     intensity: 2,
-    match: 96,
-    youtubeId: "g4e4o9fGZ24",
-    duration: 260,
-    lyrics: "Kya hua tera wada, woh kasam woh irada...\nBhoolega dil jis din tumhe, woh din zindagi ka aakhiri din hoga."
-  },
-  {
-    id: "n5",
-    title: "O Sanam",
-    artist: "Lucky Ali",
-    emotion: "nostalgic",
-    language: "hindi",
-    intensity: 1,
     match: 99,
-    youtubeId: "9b_5xHekGq8",
-    duration: 225,
-    lyrics: "Shaamon ke dhalte hi aati hai teri yaad...\nO sanam, mohabbat ki kasam."
+    youtubeId: "1k8craCGpgs",
+    duration: 250,
+    lyrics: "Just a small town girl, livin' in a lonely world. She took the midnight train goin' anywhere."
   },
 
   // --- ANGRY / INTENSE ---
@@ -775,28 +823,40 @@ const SONGS_DATA = [
     lyrics: "I tried so hard and got so far, but in the end it doesn't even matter!\nI had to fall to lose it all."
   },
   {
-    id: "a3",
-    title: "Sadda Haq",
-    artist: "Mohit Chauhan, A.R. Rahman",
+    id: "a5",
+    title: "Killing in the Name",
+    artist: "Rage Against the Machine",
     emotion: "angry",
-    language: "hindi",
+    language: "english",
     intensity: 3,
     match: 100,
-    youtubeId: "p9DQINKFj0U",
-    duration: 365,
-    lyrics: "Sadda haq aithe rakh! Sadda haq aithe rakh!\nNa sahenge hum, na jhookenge hum!"
+    youtubeId: "bWXazVhlyxQ",
+    duration: 314, // 5:14
+    lyrics: "Fuck you, I won't do what you tell me!"
   },
   {
-    id: "a4",
-    title: "Apna Time Aayega",
-    artist: "Ranveer Singh, DIVINE",
+    id: "a6",
+    title: "Bulls on Parade",
+    artist: "Rage Against the Machine",
     emotion: "angry",
-    language: "hindi",
+    language: "english",
     intensity: 3,
-    match: 97,
-    youtubeId: "j6caW0K15f4",
-    duration: 130,
-    lyrics: "Apna time aayega! Tu nanga hi toh aaya hai, kya ghanta lekar jaayega?\nApna time aayega!"
+    match: 99,
+    youtubeId: "3vyrHjoV1po",
+    duration: 231,
+    lyrics: "They rally 'round the family with a pocket full of shells."
+  },
+  {
+    id: "a7",
+    title: "Chop Suey!",
+    artist: "System Of A Down",
+    emotion: "angry",
+    language: "english",
+    intensity: 3,
+    match: 98,
+    youtubeId: "CSvFpBOe8eY",
+    duration: 208,
+    lyrics: "Wake up! Grab a brush and put a little make-up! Hide the scars to fade away the shake-up!"
   },
 
   // --- PARTY / DANCE ---
@@ -813,28 +873,40 @@ const SONGS_DATA = [
     lyrics: "If you wanna run away with me, I know a galaxy and I can take you for a ride...\nI had a premonition that we fell into a rhythm."
   },
   {
-    id: "p2",
-    title: "Kar Gayi Chull",
-    artist: "Badshah, Fazilpuria, Sukriti Kakar",
+    id: "p4",
+    title: "Get Lucky",
+    artist: "Daft Punk ft. Pharrell Williams",
     emotion: "party",
-    language: "hindi",
+    language: "english",
     intensity: 3,
-    match: 100,
-    youtubeId: "NTHz9ephYTw",
-    duration: 187,
-    lyrics: "Ladki pagal hai pagal hai pagal hai!\nArre daayein baayein kaise kamar hilaaye, arre kar gayi chull!"
+    match: 99,
+    youtubeId: "5K6x2E_H44c",
+    duration: 247, // 4:07
+    lyrics: "We're up all night to get lucky. We're up all night to get some."
   },
   {
-    id: "p3",
-    title: "High Rated Gabru",
-    artist: "Guru Randhawa",
+    id: "p5",
+    title: "I Gotta Feeling",
+    artist: "The Black Eyed Peas",
     emotion: "party",
-    language: "hindi",
+    language: "english",
+    intensity: 3,
+    match: 100,
+    youtubeId: "uSD4vsh1zDA",
+    duration: 247,
+    lyrics: "I gotta feeling that tonight's gonna be a good night. That tonight's gonna be a good, good night."
+  },
+  {
+    id: "p6",
+    title: "Shake It Off",
+    artist: "Taylor Swift",
+    emotion: "party",
+    language: "english",
     intensity: 3,
     match: 98,
-    youtubeId: "hjWf8A0YNSE",
-    duration: 215,
-    lyrics: "Haye ni haye nakhra tera ni, high rated gabru nu maare!\nTere karke dil de kone vich ek thaan khali!"
+    youtubeId: "nfWlot6h_JM",
+    duration: 233,
+    lyrics: "'Cause the players gonna play, play, play, play, play. And the haters gonna hate, hate, hate, hate, hate. Baby, I'm just gonna shake, shake, shake, shake, shake. I shake it off, I shake it off."
   },
 
   // --- SLEEP / MIDNIGHT ---
@@ -863,16 +935,40 @@ const SONGS_DATA = [
     lyrics: "Soft rain droplets and ocean wave white noise for deep sleep."
   },
   {
-    id: "sl3",
-    title: "Phir Le Aya Dil (Reprise)",
-    artist: "Arijit Singh, Pritam",
+    id: "sl4",
+    title: "Clair de Lune",
+    artist: "Claude Debussy",
     emotion: "sleep",
-    language: "hindi",
+    language: "instrumental",
+    intensity: 1,
+    match: 97,
+    youtubeId: "CvFh_y-q-B0",
+    duration: 300, // 5:00
+    lyrics: "🌙 A serene and dreamy piano piece, perfect for winding down and peaceful sleep."
+  },
+  {
+    id: "sl5",
+    title: "Orinoco Flow",
+    artist: "Enya",
+    emotion: "sleep",
+    language: "english",
     intensity: 1,
     match: 96,
-    youtubeId: "6MgsHSAcI9k",
-    duration: 300,
-    lyrics: "Phir le aya dil majboor kya keeje...\nRaas na aya rehna door kya keeje."
+    youtubeId: "LTrk4X9ACtw",
+    duration: 226,
+    lyrics: "Sail away, sail away, sail away. From Bissau to Palau, in the shade of Avalon."
+  },
+  {
+    id: "sl6",
+    title: "Only Time",
+    artist: "Enya",
+    emotion: "sleep",
+    language: "english",
+    intensity: 1,
+    match: 95,
+    youtubeId: "7wfYIMyS_dI",
+    duration: 217,
+    lyrics: "Who can say where the road goes, where the day flows? Only time. And who can say if your love grows, as your heart chose? Only time."
   }
 ];
 
@@ -920,39 +1016,6 @@ const DOM = {
   clearSearchBtn: document.getElementById("clearSearchBtn"),
   gridViewBtn: document.getElementById("gridViewBtn"),
   listViewBtn: document.getElementById("listViewBtn"),
-  
-  // Showcase & Thumbnail Elements
-  vinylShowcase: document.getElementById("vinylShowcase"),
-  vinylCenterImg: document.getElementById("vinylCenterImg"),
-  bannerCoverImg: document.getElementById("bannerCoverImg"),
-  albumPlayBtn: document.getElementById("albumPlayBtn"),
-  albumPlayIcon: document.getElementById("albumPlayIcon"),
-  coverBadgeText: document.getElementById("coverBadgeText"),
-  bannerVideoContainer: document.getElementById("bannerVideoContainer"),
-  mainYtIframe: document.getElementById("mainYtIframe"),
-  audioModeTab: document.getElementById("audioModeTab"),
-  videoModeTab: document.getElementById("videoModeTab"),
-  
-  // Showcase Info Elements
-  liveDot: document.getElementById("liveDot"),
-  bannerStatusText: document.getElementById("bannerStatusText"),
-  bannerTrackTitle: document.getElementById("bannerTrackTitle"),
-  bannerTrackArtist: document.getElementById("bannerTrackArtist"),
-  bannerMoodTag: document.getElementById("bannerMoodTag"),
-  bannerLangTag: document.getElementById("bannerLangTag"),
-  bannerMatchTag: document.getElementById("bannerMatchTag"),
-  bannerPlayPauseBtn: document.getElementById("bannerPlayPauseBtn"),
-  bannerPlayIcon: document.getElementById("bannerPlayIcon"),
-  bannerPlayText: document.getElementById("bannerPlayText"),
-  bannerSkipBackBtn: document.getElementById("bannerSkipBackBtn"),
-  bannerSkipFwdBtn: document.getElementById("bannerSkipFwdBtn"),
-  bannerDirectYtBtn: document.getElementById("bannerDirectYtBtn"),
-  bannerFavBtn: document.getElementById("bannerFavBtn"),
-  spectrumCanvas: document.getElementById("spectrumCanvas"),
-  bannerCurrentTime: document.getElementById("bannerCurrentTime"),
-  bannerDuration: document.getElementById("bannerDuration"),
-  bannerTimelineBar: document.getElementById("bannerTimelineBar"),
-  bannerTimelineFill: document.getElementById("bannerTimelineFill"),
 
   // Favorites Drawer
   favoritesToggleBtn: document.getElementById("favoritesToggleBtn"),
@@ -1010,7 +1073,6 @@ function initApp() {
   setEmotion(AppState.currentEmotion, false);
   setupEventListeners();
   updateFavoritesCount();
-  startSpectrumVisualizer();
 }
 
 function showYouTubeToast(title) {
@@ -1191,19 +1253,14 @@ function playSong(song, index = -1, autoOpenYouTube = false) {
   const thumbnail = `https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg`;
 
   // 1. Update All Artwork Displays
-  DOM.bannerCoverImg.src = thumbnail;
-  DOM.vinylCenterImg.src = thumbnail;
   DOM.playerThumbImg.src = thumbnail;
   DOM.modalThumbImg.src = thumbnail;
 
   // 2. Animate Vinyl & Pulse
-  DOM.vinylShowcase.classList.add("playing");
   DOM.playerThumbBox.classList.add("playing");
-  DOM.liveDot.classList.remove("paused");
 
   // 3. Update YouTube IFrame Embed in App
   const ytEmbedUrl = `https://www.youtube.com/embed/${song.youtubeId}?autoplay=1&enablejsapi=1&rel=0`;
-  if (DOM.mainYtIframe) DOM.mainYtIframe.src = ytEmbedUrl;
   if (DOM.cinemaYtIframe) DOM.cinemaYtIframe.src = ytEmbedUrl;
 
   // 4. AUTOMATICALLY GO TO YOUTUBE & PLAY!
@@ -1213,7 +1270,6 @@ function playSong(song, index = -1, autoOpenYouTube = false) {
   }
 
   // 5. Update UI State & Timeline
-  updateBannerUI(song);
   updatePlayerBarUI(song);
   updateModalUI(song);
 
@@ -1223,30 +1279,6 @@ function playSong(song, index = -1, autoOpenYouTube = false) {
 
   updatePlayPauseButtons(true);
   highlightActiveCard(song.id);
-}
-
-function updateBannerUI(song) {
-  DOM.bannerStatusText.textContent = "Live on YouTube";
-  DOM.coverBadgeText.textContent = "YouTube Ready";
-  DOM.bannerTrackTitle.textContent = song.title;
-  DOM.bannerTrackArtist.textContent = song.artist;
-  DOM.bannerMoodTag.innerHTML = `<i class="fa-solid fa-heart"></i> ${song.emotion.toUpperCase()}`;
-  DOM.bannerLangTag.innerHTML = `<i class="fa-solid fa-globe"></i> ${song.language.toUpperCase()}`;
-  DOM.bannerMatchTag.textContent = `${song.match}% Mood Match`;
-  DOM.bannerDuration.textContent = formatDuration(song.duration);
-
-  DOM.bannerPlayPauseBtn.onclick = () => {
-    window.open(`https://www.youtube.com/watch?v=${song.youtubeId}`, "_blank");
-  };
-
-  DOM.albumPlayBtn.onclick = () => {
-    window.open(`https://www.youtube.com/watch?v=${song.youtubeId}`, "_blank");
-  };
-
-  const isLiked = AppState.favorites.some(f => f.id === song.id);
-  DOM.bannerFavBtn.className = `banner-btn icon-only-btn ${isLiked ? 'liked' : ''}`;
-  DOM.bannerFavBtn.innerHTML = `<i class="fa-${isLiked ? 'solid' : 'regular'} fa-heart"></i>`;
-  DOM.bannerFavBtn.onclick = () => toggleFavorite(song);
 }
 
 function updatePlayerBarUI(song) {
@@ -1285,10 +1317,6 @@ function highlightActiveCard(songId) {
 
 function updatePlayPauseButtons(playing) {
   DOM.playPauseIcon.className = `fa-solid ${playing ? 'fa-pause' : 'fa-play'}`;
-  DOM.bannerPlayIcon.className = `fa-brands fa-youtube`;
-  DOM.albumPlayIcon.className = `fa-brands fa-youtube`;
-  DOM.bannerPlayText.textContent = "Play on YouTube";
-  DOM.coverBadgeText.textContent = "YouTube Ready";
 }
 
 /**
@@ -1316,10 +1344,6 @@ function skipSeconds(seconds) {
 
   AppState.currentTimeSec = Math.max(0, Math.min(AppState.currentTimeSec + seconds, duration));
   updateTimelineDisplay(AppState.currentTimeSec, duration);
-
-  if (DOM.mainYtIframe && DOM.mainYtIframe.contentWindow) {
-    DOM.mainYtIframe.contentWindow.postMessage(`{"event":"command","func":"seekTo","args":[${AppState.currentTimeSec}, true]}`, '*');
-  }
 }
 
 function startProgressTracker(duration) {
@@ -1345,14 +1369,11 @@ function startProgressTracker(duration) {
 
 function updateTimelineDisplay(current, duration) {
   DOM.currentTimeLabel.textContent = formatDuration(current);
-  DOM.bannerCurrentTime.textContent = formatDuration(current);
-  DOM.bannerDuration.textContent = formatDuration(duration);
   DOM.durationLabel.textContent = formatDuration(duration);
 
   const percent = Math.min((current / duration) * 100, 100);
   DOM.timelineFill.style.width = `${percent}%`;
   DOM.timelineHandle.style.left = `${percent}%`;
-  DOM.bannerTimelineFill.style.width = `${percent}%`;
 }
 
 function playNextTrack(autoLaunch = true) {
@@ -1439,41 +1460,6 @@ function renderFavoritesList() {
 }
 
 // ==========================================================================
-// 8. SOUND SPECTRUM VISUALIZER ANIMATION
-// ==========================================================================
-function startSpectrumVisualizer() {
-  const canvas = DOM.spectrumCanvas;
-  if (!canvas) return;
-  const ctx = canvas.getContext("2d");
-  const numBars = 40;
-  const barWidth = (canvas.width / numBars) - 2;
-
-  function renderFrame() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let i = 0; i < numBars; i++) {
-      let height = 4;
-      if (AppState.isPlaying) {
-        height = Math.floor(Math.random() * (canvas.height - 8)) + 6;
-      }
-      const x = i * (barWidth + 2);
-      const y = canvas.height - height;
-
-      const gradient = ctx.createLinearGradient(0, y, 0, canvas.height);
-      gradient.addColorStop(0, "#ff4e4e");
-      gradient.addColorStop(1, "#ff0000");
-
-      ctx.fillStyle = gradient;
-      ctx.fillRect(x, y, barWidth, height);
-    }
-
-    requestAnimationFrame(renderFrame);
-  }
-
-  renderFrame();
-}
-
-// ==========================================================================
 // 9. EVENT LISTENERS SETUP & KEYBOARD SHORTCUTS
 // ==========================================================================
 function setupEventListeners() {
@@ -1485,35 +1471,14 @@ function setupEventListeners() {
 
   // Play / Pause Buttons (Launch directly on YouTube)
   DOM.playPauseBtn.addEventListener("click", togglePlayPause);
-  DOM.bannerPlayPauseBtn.addEventListener("click", togglePlayPause);
-  DOM.albumPlayBtn.addEventListener("click", togglePlayPause);
 
   // Prev / Next Buttons
   DOM.prevBtn.addEventListener("click", () => playPrevTrack(true));
   DOM.nextBtn.addEventListener("click", () => playNextTrack(true));
 
   // Skip 10 Seconds Buttons (-10s / +10s)
-  if (DOM.bannerSkipBackBtn) DOM.bannerSkipBackBtn.addEventListener("click", () => skipSeconds(-10));
-  if (DOM.bannerSkipFwdBtn) DOM.bannerSkipFwdBtn.addEventListener("click", () => skipSeconds(10));
   if (DOM.skipBack10Btn) DOM.skipBack10Btn.addEventListener("click", () => skipSeconds(-10));
   if (DOM.skipFwd10Btn) DOM.skipFwd10Btn.addEventListener("click", () => skipSeconds(10));
-
-  // Player Mode Tabs (Direct YouTube vs In-App Embed)
-  DOM.audioModeTab.addEventListener("click", () => {
-    DOM.audioModeTab.classList.add("active");
-    DOM.videoModeTab.classList.remove("active");
-    DOM.vinylShowcase.style.display = "flex";
-    DOM.bannerVideoContainer.style.display = "none";
-    AppState.activePlayerMode = "audio";
-  });
-
-  DOM.videoModeTab.addEventListener("click", () => {
-    DOM.videoModeTab.classList.add("active");
-    DOM.audioModeTab.classList.remove("active");
-    DOM.vinylShowcase.style.display = "none";
-    DOM.bannerVideoContainer.style.display = "block";
-    AppState.activePlayerMode = "video";
-  });
 
   // Shuffle & Repeat
   DOM.shuffleBtn.addEventListener("click", () => {
@@ -1532,22 +1497,6 @@ function setupEventListeners() {
     const rect = DOM.timelineBar.getBoundingClientRect();
     const fraction = (e.clientX - rect.left) / rect.width;
     AppState.currentTimeSec = Math.floor(AppState.currentTrack.duration * fraction);
-    updateTimelineDisplay(AppState.currentTimeSec, AppState.currentTrack.duration);
-    if (DOM.mainYtIframe && DOM.mainYtIframe.contentWindow) {
-      DOM.mainYtIframe.contentWindow.postMessage(`{"event":"command","func":"seekTo","args":[${AppState.currentTimeSec}, true]}`, '*');
-    }
-  });
-
-  // Timeline Seeking (Banner Showcase)
-  DOM.bannerTimelineBar.addEventListener("click", (e) => {
-    if (!AppState.currentTrack) return;
-    const rect = DOM.bannerTimelineBar.getBoundingClientRect();
-    const fraction = (e.clientX - rect.left) / rect.width;
-    AppState.currentTimeSec = Math.floor(AppState.currentTrack.duration * fraction);
-    updateTimelineDisplay(AppState.currentTimeSec, AppState.currentTrack.duration);
-    if (DOM.mainYtIframe && DOM.mainYtIframe.contentWindow) {
-      DOM.mainYtIframe.contentWindow.postMessage(`{"event":"command","func":"seekTo","args":[${AppState.currentTimeSec}, true]}`, '*');
-    }
   });
 
   // Volume slider
