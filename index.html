@@ -75,110 +75,6 @@
       <!-- Music Discovery Section -->
       <section class="discovery-section" id="discoverySection">
         
-        <!-- Now Playing Hero Showcase -->
-        <div class="now-playing-banner" id="nowPlayingBanner">
-          <!-- Left: Artwork & Spinning Vinyl Section -->
-          <div class="banner-artwork-section">
-            <div class="vinyl-showcase-container" id="vinylShowcase">
-              <!-- Vinyl Record Disc -->
-              <div class="vinyl-disc" id="vinylDisc">
-                <div class="vinyl-center-label">
-                  <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=120&auto=format&fit=crop&q=80" alt="Vinyl Center" id="vinylCenterImg">
-                </div>
-              </div>
-              
-              <!-- Album Artwork Sleeve -->
-              <div class="album-cover-box" id="albumCoverBox">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=80" alt="Song Thumbnail" id="bannerCoverImg" class="banner-cover-img">
-                <div class="album-cover-badge" id="albumCoverBadge">
-                  <i class="fa-brands fa-youtube"></i> <span id="coverBadgeText">YouTube Ready</span>
-                </div>
-                <div class="album-play-overlay" id="albumPlayOverlay">
-                  <button class="album-play-btn" id="albumPlayBtn" title="Play Directly on YouTube">
-                    <i class="fa-solid fa-play" id="albumPlayIcon"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- YouTube Video Embed Frame (Toggleable) -->
-            <div class="banner-video-container" id="bannerVideoContainer" style="display: none;">
-              <iframe id="mainYtIframe" 
-                src="" 
-                title="YouTube Music Player" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-              </iframe>
-            </div>
-
-            <!-- Player Mode Tabs: YouTube Tab vs Embedded -->
-            <div class="player-mode-switch">
-              <button class="mode-tab active" id="audioModeTab" title="Direct YouTube Mode">
-                <i class="fa-brands fa-youtube"></i> Direct YouTube
-              </button>
-              <button class="mode-tab" id="videoModeTab" title="Embedded Player">
-                <i class="fa-solid fa-tv"></i> In-App Player
-              </button>
-            </div>
-          </div>
-
-          <!-- Right: Song Info, Live Visualizer & Playback Controls -->
-          <div class="banner-info-section">
-            <div class="banner-status-badge">
-              <span class="live-dot" id="liveDot"></span> <span id="bannerStatusText">Click any song below to play directly on YouTube</span>
-            </div>
-            <h2 class="banner-track-title" id="bannerTrackTitle">No Song Selected</h2>
-            <p class="banner-track-artist" id="bannerTrackArtist">Tap any song card to automatically open and play on YouTube</p>
-            
-            <div class="banner-tags">
-              <span class="badge-tag" id="bannerMoodTag"><i class="fa-solid fa-heart"></i> Happy</span>
-              <span class="badge-tag" id="bannerLangTag"><i class="fa-solid fa-globe"></i> English</span>
-              <span class="badge-tag highlight" id="bannerMatchTag">99% Mood Match</span>
-            </div>
-
-            <!-- Sound Wave Canvas Visualizer -->
-            <div class="banner-visualizer">
-              <div class="viz-header">
-                <span><i class="fa-solid fa-wave-square"></i> Live Sound Frequency</span>
-                <span class="viz-status" id="vizStatus">YouTube Live Audio</span>
-              </div>
-              <canvas id="spectrumCanvas" width="400" height="50"></canvas>
-            </div>
-
-            <!-- Audio Progress Bar in Banner -->
-            <div class="banner-timeline-wrap">
-              <span class="time-stamp" id="bannerCurrentTime">0:00</span>
-              <div class="banner-timeline-bar" id="bannerTimelineBar" title="Click anywhere to jump to timestamp">
-                <div class="banner-timeline-fill" id="bannerTimelineFill"></div>
-              </div>
-              <span class="time-stamp" id="bannerDuration">0:00</span>
-            </div>
-
-            <!-- Skip & Play Action Controls -->
-            <div class="banner-actions">
-              <!-- Direct YouTube Play Button -->
-              <button class="banner-btn primary-yt-btn" id="bannerPlayPauseBtn" title="Launch on YouTube">
-                <i class="fa-brands fa-youtube" id="bannerPlayIcon"></i> <span id="bannerPlayText">Play on YouTube</span>
-              </button>
-
-              <!-- Skip -10s -->
-              <button class="banner-btn skip-btn" id="bannerSkipBackBtn" title="Rewind 10 Seconds">
-                <i class="fa-solid fa-rotate-left"></i> -10s
-              </button>
-
-              <!-- Skip +10s -->
-              <button class="banner-btn skip-btn" id="bannerSkipFwdBtn" title="Forward 10 Seconds">
-                +10s <i class="fa-solid fa-rotate-right"></i>
-              </button>
-
-              <!-- Favorite Button -->
-              <button class="banner-btn icon-only-btn" id="bannerFavBtn" title="Save to Favorites">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
         <!-- Discovery Header & Filter Controls -->
         <div class="discovery-header">
           <div class="current-mood-info">
@@ -197,7 +93,6 @@
               <div class="pill-group" id="languageFilters">
                 <button class="pill-btn active" data-lang="all">All</button>
                 <button class="pill-btn" data-lang="english">English</button>
-                <button class="pill-btn" data-lang="hindi">Hindi</button>
                 <button class="pill-btn" data-lang="instrumental">Lo-Fi / Beats</button>
               </div>
             </div>
