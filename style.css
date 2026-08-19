@@ -1264,6 +1264,12 @@ body {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.drawer-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .drawer-header h3 {
   font-size: 1.2rem;
   font-weight: 800;
@@ -1271,6 +1277,27 @@ body {
   align-items: center;
   gap: 8px;
   color: #ef4444;
+}
+
+.clear-all-favs-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.88rem;
+  transition: var(--transition-fast);
+}
+
+.clear-all-favs-btn:hover {
+  background: rgba(225, 29, 72, 0.15);
+  border-color: #e11d48;
+  color: #e11d48;
 }
 
 .close-drawer-btn {
