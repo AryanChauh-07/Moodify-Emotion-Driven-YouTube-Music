@@ -132,7 +132,10 @@
     <aside class="favorites-drawer" id="favoritesDrawer">
       <div class="drawer-header">
         <h3><i class="fa-solid fa-heart"></i> Liked Songs</h3>
-        <button class="close-drawer-btn" id="closeFavDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+        <div class="drawer-header-actions">
+          <button class="clear-all-favs-btn" id="clearAllFavsBtn" title="Clear All Liked Songs"><i class="fa-solid fa-trash-can"></i></button>
+          <button class="close-drawer-btn" id="closeFavDrawerBtn" title="Close Drawer"><i class="fa-solid fa-xmark"></i></button>
+        </div>
       </div>
       <div class="drawer-content" id="favSongsList">
         <p class="empty-fav-msg">No liked songs yet. Click the heart icon on any song to save it here!</p>
