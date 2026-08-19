@@ -173,6 +173,18 @@ const SONGS_DATA = [
     lyrics: "Don't believe me, just watch! Come on, dance, jump on it!"
   },
   {
+    id: "h5",
+    title: "I'm a Believer",
+    artist: "The Monkees",
+    emotion: "happy",
+    language: "english",
+    intensity: 2,
+    match: 96,
+    youtubeId: "XfuBREMXxts",
+    duration: 166,
+    lyrics: "Then I saw her face, now I'm a believer. Not a trace of doubt in my mind."
+  },
+  {
     id: "h8",
     title: "Sunny Morning Chill Lo-Fi",
     artist: "ChillHop Beats",
@@ -295,6 +307,18 @@ const SONGS_DATA = [
     lyrics: "'Cause sometimes I look in her eyes and that's where I find a glimpse of us..."
   },
   {
+    id: "s5",
+    title: "I'm Not The Only One",
+    artist: "Sam Smith",
+    emotion: "sad",
+    language: "english",
+    intensity: 3,
+    match: 98,
+    youtubeId: "nCkpzqqrGkQ",
+    duration: 243,
+    lyrics: "You say I'm crazy 'cause you don't think I know what you've done. But when you call me baby, I know I'm not the only one."
+  },
+  {
     id: "s8",
     title: "Melancholy Piano & Rain Healing",
     artist: "Quiet Melodies",
@@ -405,6 +429,18 @@ const SONGS_DATA = [
     lyrics: "Fire up that loud, another round of shots!\nTurn down for what?!"
   },
   {
+    id: "e4",
+    title: "Stronger",
+    artist: "Kanye West",
+    emotion: "energetic",
+    language: "english",
+    intensity: 3,
+    match: 98,
+    youtubeId: "PsO6ZnUZI0g",
+    duration: 311,
+    lyrics: "N-n-now that that don't kill me, can only make me stronger. I need you to hurry up now, 'cause I can't wait much longer."
+  },
+  {
     id: "e7",
     title: "High Energy Synthwave Pulse",
     artist: "CyberDrive",
@@ -489,6 +525,18 @@ const SONGS_DATA = [
     youtubeId: "jJPMnTXl63E",
     duration: 173,
     lyrics: "Don't stay awake for too long, don't go to bed...\nI'll make a cup of coffee for your head."
+  },
+  {
+    id: "c3",
+    title: "Sunday Morning",
+    artist: "Maroon 5",
+    emotion: "calm",
+    language: "english",
+    intensity: 1,
+    match: 97,
+    youtubeId: "S2Cti12XBw4",
+    duration: 245,
+    lyrics: "Sunday morning, rain is falling. Steal some covers, share some skin. Clouds are shrouding us in moments unforgettable."
   },
   {
     id: "c6",
@@ -599,6 +647,18 @@ const SONGS_DATA = [
     youtubeId: "lp-EO5I60KA",
     duration: 280,
     lyrics: "When your legs don't work like they used to before...\nAnd the darling I will be loving you 'til we're 70."
+  },
+  {
+    id: "r4",
+    title: "Just the Way You Are",
+    artist: "Bruno Mars",
+    emotion: "romantic",
+    language: "english",
+    intensity: 2,
+    match: 99,
+    youtubeId: "LjhCEhWiKXk",
+    duration: 220,
+    lyrics: "When I see your face, there's not a thing that I would change. 'Cause you're amazing, just the way you are."
   },
   {
     id: "r7",
@@ -761,6 +821,18 @@ const SONGS_DATA = [
     lyrics: "Take on me (Take on me), take me on (Take on me)...\nI'll be gone in a day or two!"
   },
   {
+    id: "n3",
+    title: "Smells Like Teen Spirit",
+    artist: "Nirvana",
+    emotion: "nostalgic",
+    language: "english",
+    intensity: 3,
+    match: 99,
+    youtubeId: "hTWKbfoikeg",
+    duration: 278,
+    lyrics: "With the lights out, it's less dangerous. Here we are now, entertain us. A mulatto, an albino, a mosquito, my libido."
+  },
+  {
     id: "n6",
     title: "Wonderwall",
     artist: "Oasis",
@@ -823,6 +895,18 @@ const SONGS_DATA = [
     lyrics: "I tried so hard and got so far, but in the end it doesn't even matter!\nI had to fall to lose it all."
   },
   {
+    id: "a3",
+    title: "Break Stuff",
+    artist: "Limp Bizkit",
+    emotion: "angry",
+    language: "english",
+    intensity: 3,
+    match: 98,
+    youtubeId: "ZpUYjpKg9KY",
+    duration: 167,
+    lyrics: "It's just one of those days when you don't wanna wake up. Everything is f*cked, everybody sucks."
+  },
+  {
     id: "a5",
     title: "Killing in the Name",
     artist: "Rage Against the Machine",
@@ -871,6 +955,30 @@ const SONGS_DATA = [
     youtubeId: "TUVcZfQe-Kw",
     duration: 203,
     lyrics: "If you wanna run away with me, I know a galaxy and I can take you for a ride...\nI had a premonition that we fell into a rhythm."
+  },
+  {
+    id: "p2",
+    title: "Party Rock Anthem",
+    artist: "LMFAO ft. Lauren Bennett, GoonRock",
+    emotion: "party",
+    language: "english",
+    intensity: 3,
+    match: 98,
+    youtubeId: "KQ6zr6kCPj8",
+    duration: 262,
+    lyrics: "Party rock is in the house tonight. Everybody just have a good time. And we gon' make you lose your mind."
+  },
+  {
+    id: "p3",
+    title: "Don't Start Now",
+    artist: "Dua Lipa",
+    emotion: "party",
+    language: "english",
+    intensity: 3,
+    match: 97,
+    youtubeId: "oygrmJFKYZY",
+    duration: 183,
+    lyrics: "If you don't wanna see me dancing with somebody... Don't show up, don't come out."
   },
   {
     id: "p4",
@@ -933,6 +1041,18 @@ const SONGS_DATA = [
     youtubeId: "M5QY2_8704o",
     duration: 360,
     lyrics: "Soft rain droplets and ocean wave white noise for deep sleep."
+  },
+  {
+    id: "sl3",
+    title: "Deep Sleep Ambient Music",
+    artist: "DreamScapes",
+    emotion: "sleep",
+    language: "instrumental",
+    intensity: 1,
+    match: 99,
+    youtubeId: "g3__e6jV02A",
+    duration: 3600,
+    lyrics: "💤 Continuous ambient soundscape for deep, uninterrupted sleep."
   },
   {
     id: "sl4",
@@ -1022,6 +1142,7 @@ const DOM = {
   favoritesDrawer: document.getElementById("favoritesDrawer"),
   closeFavDrawerBtn: document.getElementById("closeFavDrawerBtn"),
   favSongsList: document.getElementById("favSongsList"),
+  clearAllFavsBtn: document.getElementById("clearAllFavsBtn"),
   favCountBadge: document.getElementById("favCountBadge"),
   
   // Cinema Modal
@@ -1242,43 +1363,62 @@ function renderSongsGrid(songs) {
 // ==========================================================================
 // 6. CENTRAL PLAYBACK & YOUTUBE AUTO-LAUNCH ENGINE
 // ==========================================================================
+/**
+ * Orchestrates playing a new song by updating state, UI, and handling playback.
+ * @param {object} song - The song object to play.
+ * @param {number} [index=-1] - The index of the song in the current playlist.
+ * @param {boolean} [autoOpenYouTube=false] - Whether to automatically open the song on YouTube.
+ */
 function playSong(song, index = -1, autoOpenYouTube = false) {
+  updateCurrentTrackState(song, index);
+  updateAllSongUI(song);
+  handlePlaybackActions(song, autoOpenYouTube);
+}
+
+/**
+ * Updates the global AppState for the currently playing track.
+ * @param {object} song - The new song object.
+ * @param {number} index - The playlist index of the new song.
+ */
+function updateCurrentTrackState(song, index) {
   AppState.currentTrack = song;
-  if (index !== -1) {
-    AppState.playlistIndex = index;
-  } else {
-    AppState.playlistIndex = AppState.playlist.findIndex(s => s.id === song.id);
-  }
+  AppState.playlistIndex = index !== -1 ? index : AppState.playlist.findIndex(s => s.id === song.id);
+  AppState.isPlaying = true;
+  AppState.currentTimeSec = 0;
+}
 
+/**
+ * Updates all relevant UI components to reflect the new playing song.
+ * @param {object} song - The song object to display.
+ */
+function updateAllSongUI(song) {
   const thumbnail = `https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg`;
+  const ytEmbedUrl = `https://www.youtube.com/embed/${song.youtubeId}?autoplay=1&enablejsapi=1&rel=0`;
 
-  // 1. Update All Artwork Displays
+  // Update artwork and cinema player
   DOM.playerThumbImg.src = thumbnail;
   DOM.modalThumbImg.src = thumbnail;
-
-  // 2. Animate Vinyl & Pulse
   DOM.playerThumbBox.classList.add("playing");
-
-  // 3. Update YouTube IFrame Embed in App
-  const ytEmbedUrl = `https://www.youtube.com/embed/${song.youtubeId}?autoplay=1&enablejsapi=1&rel=0`;
   if (DOM.cinemaYtIframe) DOM.cinemaYtIframe.src = ytEmbedUrl;
 
-  // 4. AUTOMATICALLY GO TO YOUTUBE & PLAY!
+  // Update specific UI sections
+  updatePlayerBarUI(song);
+  updateModalUI(song);
+  updatePlayPauseButtons(true);
+  highlightActiveCard(song.id);
+}
+
+/**
+ * Handles side effects of playing a song, like opening YouTube and starting timers.
+ * @param {object} song - The song object.
+ * @param {boolean} autoOpenYouTube - Flag to open in a new tab.
+ */
+function handlePlaybackActions(song, autoOpenYouTube) {
   if (autoOpenYouTube) {
     showYouTubeToast(song.title);
     window.open(`https://www.youtube.com/watch?v=${song.youtubeId}`, "_blank");
   }
-
-  // 5. Update UI State & Timeline
-  updatePlayerBarUI(song);
-  updateModalUI(song);
-
-  AppState.isPlaying = true;
-  AppState.currentTimeSec = 0;
   startProgressTracker(song.duration);
-
-  updatePlayPauseButtons(true);
-  highlightActiveCard(song.id);
 }
 
 function updatePlayerBarUI(song) {
@@ -1417,12 +1557,34 @@ function toggleFavorite(song) {
   }
 }
 
+function clearAllFavorites() {
+  if (AppState.favorites.length === 0) return;
+
+  const confirmed = confirm("Are you sure you want to clear all liked songs? This action cannot be undone.");
+  if (confirmed) {
+    AppState.favorites = [];
+    localStorage.setItem("moodify_favorites", JSON.stringify(AppState.favorites));
+    
+    updateFavoritesCount();
+    renderFavoritesList();
+    filterAndRenderSongs(); // Re-renders song cards to update heart icons
+
+    // Update player bar if a song is playing
+    if (AppState.currentTrack) updatePlayerBarUI(AppState.currentTrack);
+  }
+}
+
 function updateFavoritesCount() {
   DOM.favCountBadge.textContent = AppState.favorites.length;
 }
 
 function renderFavoritesList() {
   DOM.favSongsList.innerHTML = "";
+
+  // Hide/show the clear all button based on whether there are favorites
+  if (DOM.clearAllFavsBtn) {
+    DOM.clearAllFavsBtn.style.display = AppState.favorites.length > 0 ? 'flex' : 'none';
+  }
 
   if (AppState.favorites.length === 0) {
     DOM.favSongsList.innerHTML = `
@@ -1575,6 +1737,11 @@ function setupEventListeners() {
   DOM.closeFavDrawerBtn.addEventListener("click", () => {
     DOM.favoritesDrawer.classList.remove("open");
   });
+
+  // Clear all favorites button
+  if (DOM.clearAllFavsBtn) {
+    DOM.clearAllFavsBtn.addEventListener("click", clearAllFavorites);
+  }
 
   // Cinema Modal
   DOM.cinemaToggleBtn.addEventListener("click", () => {
