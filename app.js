@@ -1289,6 +1289,49 @@ function filterAndRenderSongs() {
   renderSongsGrid(songs);
 }
 
+function getSongThumbnail(song) {
+  return `https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg`;
+}
+
+function getFallbackThumbnail(song) {
+  const emotion = EMOTIONS_DATA.find(item => item.id === song.emotion);
+  const accent = emotion ? emotion.accent : '#ef4444';
+  const escapeSvgText = value => value.replace(/[&<>"']/g, character => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&apos;'
+  })[character]);
+  const title = escapeSvgText(song.title.length > 28 ? `${song.title.slice(0, 26)}...` : song.title);
+  const artist = escapeSvgText(song.artist.length > 28 ? `${song.artist.slice(0, 26)}...` : song.artist);
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#111827" />
+          <stop offset="100%" stop-color="${accent}" />
+        </linearGradient>
+      </defs>
+      <rect width="640" height="360" fill="url(#bg)" />
+      <circle cx="520" cy="80" r="120" fill="white" opacity=".12" />
+      <circle cx="520" cy="80" r="62" fill="none" stroke="white" stroke-width="3" opacity=".35" />
+      <path d="M510 52v82a28 28 0 1 1-14-24V78l72-20v64a28 28 0 1 1-14-24V40z" fill="white" opacity=".9" />
+      <text x="40" y="250" fill="white" font-family="Arial, sans-serif" font-size="30" font-weight="700">${title}</text>
+      <text x="40" y="292" fill="white" opacity=".72" font-family="Arial, sans-serif" font-size="20">${artist}</text>
+      <text x="40" y="326" fill="white" opacity=".5" font-family="Arial, sans-serif" font-size="14" letter-spacing="2">MOODIFY</text>
+    </svg>`;
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function useThumbnailFallback(image, song) {
+  image.addEventListener('error', () => {
+    if (image.dataset.fallbackApplied) return;
+    image.dataset.fallbackApplied = 'true';
+    image.src = getFallbackThumbnail(song);
+  });
+}
+
 function renderSongsGrid(songs) {
   DOM.songsGrid.innerHTML = "";
 
@@ -1305,7 +1348,7 @@ function renderSongsGrid(songs) {
   songs.forEach((song, index) => {
     const isLiked = AppState.favorites.some(f => f.id === song.id);
     const isCurrentPlaying = AppState.currentTrack && AppState.currentTrack.id === song.id;
-    const thumbnail = `https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg`;
+    const thumbnail = getSongThumbnail(song);
 
     const card = document.createElement("div");
     card.className = `song-card ${isCurrentPlaying ? 'now-playing' : ''}`;
@@ -1341,6 +1384,8 @@ function renderSongsGrid(songs) {
         </div>
       </div>
     `;
+
+    useThumbnailFallback(card.querySelector('.song-card-artwork img'), song);
 
     // CLICK ANYWHERE ON SONG CARD -> AUTOMATICALLY OPENS & PLAYS ON YOUTUBE!
     card.addEventListener("click", (e) => {
@@ -1392,12 +1437,20 @@ function updateCurrentTrackState(song, index) {
  * @param {object} song - The song object to display.
  */
 function updateAllSongUI(song) {
-  const thumbnail = `https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg`;
+  const thumbnail = getSongThumbnail(song);
   const ytEmbedUrl = `https://www.youtube.com/embed/${song.youtubeId}?autoplay=1&enablejsapi=1&rel=0`;
 
   // Update artwork and cinema player
   DOM.playerThumbImg.src = thumbnail;
   DOM.modalThumbImg.src = thumbnail;
+  DOM.playerThumbImg.onerror = () => {
+    DOM.playerThumbImg.onerror = null;
+    DOM.playerThumbImg.src = getFallbackThumbnail(song);
+  };
+  DOM.modalThumbImg.onerror = () => {
+    DOM.modalThumbImg.onerror = null;
+    DOM.modalThumbImg.src = getFallbackThumbnail(song);
+  };
   DOM.playerThumbBox.classList.add("playing");
   if (DOM.cinemaYtIframe) DOM.cinemaYtIframe.src = ytEmbedUrl;
 
@@ -1598,7 +1651,7 @@ function renderFavoritesList() {
     item.className = "fav-item";
     item.innerHTML = `
       <div class="fav-item-info">
-        <img src="https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg" alt="${song.title}">
+        <img src="${getSongThumbnail(song)}" alt="${song.title}">
         <div class="fav-item-text">
           <div class="fav-item-title">${song.title}</div>
           <div class="fav-item-artist">${song.artist}</div>
@@ -1606,6 +1659,8 @@ function renderFavoritesList() {
       </div>
       <button class="song-fav-btn liked" title="Remove from favorites"><i class="fa-solid fa-heart"></i></button>
     `;
+
+    useThumbnailFallback(item.querySelector('.fav-item-info img'), song);
 
     item.addEventListener("click", () => {
       playSong(song, -1, true);
