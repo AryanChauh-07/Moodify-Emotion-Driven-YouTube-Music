@@ -256,6 +256,30 @@ const SONGS_DATA = [
     duration: 185,
     lyrics: "Here comes the sun, doo-doo-doo-doo. Here comes the sun, and I say, it's all right."
   },
+  {
+    id: "h14",
+    title: "Firework",
+    artist: "Katy Perry",
+    emotion: "happy",
+    language: "english",
+    intensity: 3,
+    match: 96,
+    youtubeId: "QGJuMBdaqIw",
+    duration: 227,
+    lyrics: "Do you ever feel like a plastic bag, drifting through the wind? Firework!"
+  },
+  {
+    id: "h15",
+    title: "Dynamite",
+    artist: "BTS",
+    emotion: "happy",
+    language: "english",
+    intensity: 3,
+    match: 97,
+    youtubeId: "JGwWNGJdvx8",
+    duration: 199,
+    lyrics: "I'm in the stars tonight, so watch me bring the fire and set the night alight."
+  },
 
   // --- SAD / MELANCHOLY ---
   {
@@ -389,6 +413,30 @@ const SONGS_DATA = [
     youtubeId: "RBumgq5yVrA",
     duration: 252,
     lyrics: "Only know you love her when you let her go. And you let her go."
+  },
+  {
+    id: "s14",
+    title: "The Night We Met",
+    artist: "Lord Huron",
+    emotion: "sad",
+    language: "english",
+    intensity: 2,
+    match: 97,
+    youtubeId: "nQ-oE3Z0YbI",
+    duration: 209,
+    lyrics: "I had all and then most of you, some and now none of you."
+  },
+  {
+    id: "s15",
+    title: "My Heart Will Go On",
+    artist: "Celine Dion",
+    emotion: "sad",
+    language: "english",
+    intensity: 2,
+    match: 96,
+    youtubeId: "zgQ1I5RzY3o",
+    duration: 280,
+    lyrics: "Every night in my dreams, I see you, I feel you. That is how I know you go on."
   },
 
   // --- ENERGETIC / WORKOUT ---
@@ -610,6 +658,30 @@ const SONGS_DATA = [
     duration: 297,
     lyrics: "You got a fast car, I want a ticket to anywhere. Maybe we make a deal, maybe together we can get somewhere."
   },
+  {
+    id: "c12",
+    title: "A Sky Full of Stars",
+    artist: "Coldplay",
+    emotion: "calm",
+    language: "english",
+    intensity: 1,
+    match: 98,
+    youtubeId: "VPRjCeoBqrI",
+    duration: 268,
+    lyrics: "Cause you're a sky, 'cause you're a sky full of stars. I'm aiming at you."
+  },
+  {
+    id: "c13",
+    title: "Dreams",
+    artist: "Fleetwood Mac",
+    emotion: "calm",
+    language: "english",
+    intensity: 2,
+    match: 95,
+    youtubeId: "Y3s0H3t3_08",
+    duration: 250,
+    lyrics: "Thunder only happens when it's raining. Players only love you when they're playing."
+  },
 
   // --- ROMANTIC / IN LOVE ---
   {
@@ -719,6 +791,30 @@ const SONGS_DATA = [
     youtubeId: "vGJTaP6anOU",
     duration: 181,
     lyrics: "Wise men say only fools rush in. But I can't help falling in love with you."
+  },
+  {
+    id: "r13",
+    title: "Marry You",
+    artist: "Bruno Mars",
+    emotion: "romantic",
+    language: "english",
+    intensity: 2,
+    match: 98,
+    youtubeId: "ekzHIouo8Q4",
+    duration: 229,
+    lyrics: "It's a beautiful night, we're looking for something dumb to do."
+  },
+  {
+    id: "r14",
+    title: "At Last",
+    artist: "Etta James",
+    emotion: "romantic",
+    language: "english",
+    intensity: 1,
+    match: 96,
+    youtubeId: "H2dGk_1M4Yc",
+    duration: 182,
+    lyrics: "At last, my love has come along. My lonely days are over."
   },
 
   // --- FOCUS / STUDY ---
@@ -1015,6 +1111,30 @@ const SONGS_DATA = [
     youtubeId: "nfWlot6h_JM",
     duration: 233,
     lyrics: "'Cause the players gonna play, play, play, play, play. And the haters gonna hate, hate, hate, hate, hate. Baby, I'm just gonna shake, shake, shake, shake, shake. I shake it off, I shake it off."
+  },
+  {
+    id: "p7",
+    title: "On the Floor",
+    artist: "Jennifer Lopez ft. Pitbull",
+    emotion: "party",
+    language: "english",
+    intensity: 3,
+    match: 98,
+    youtubeId: "t4H_Zoh7G5A",
+    duration: 256,
+    lyrics: "If you go down, down, down, down, down, down, I got you, you know."
+  },
+  {
+    id: "p8",
+    title: "Can't Feel My Face",
+    artist: "The Weeknd",
+    emotion: "party",
+    language: "english",
+    intensity: 3,
+    match: 97,
+    youtubeId: "KEI4qSrkPAs",
+    duration: 213,
+    lyrics: "And I know she'll be the death of me, at least we'll both be numb."
   },
 
   // --- SLEEP / MIDNIGHT ---
